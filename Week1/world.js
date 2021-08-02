@@ -104,3 +104,5 @@ connection.query("SELECT SUM(population) FROM country", (err, result) => {
   if (err) throw err;
   console.log(result);
 });
+
+connection.end();
