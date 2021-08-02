@@ -26,30 +26,26 @@ con.connect(function (err) {
 
 // Create Invitee table
 
-con.query("DROP TABLE invitee");
-
 const invitee_sql =
-  "CREATE TABLE invitee (invitee_no INT, invitee_name  VARCHAR(50), invited_by  VARCHAR(50))";
+  "CREATE TABLE IF NOT EXISTS invitee (invitee_no INT, invitee_name  VARCHAR(50), invited_by  VARCHAR(50))";
 con.query(invitee_sql, function (err, result) {
   if (err) throw err;
   console.log("Invitee Table created");
 });
 
 // Create Room table
-con.query("DROP TABLE room");
 
 const room_sql =
-  "CREATE TABLE room (room_no INT,  room_name  VARCHAR(50), floor_number INT)";
+  "CREATE TABLE IF NOT EXISTS room (room_no INT,  room_name  VARCHAR(50), floor_number INT)";
 con.query(room_sql, function (err, result) {
   if (err) throw err;
   console.log("room Table created");
 });
 
 // Create meeting table
-con.query("DROP TABLE meeting");
 
 const meeting_sql =
-  "CREATE TABLE meeting (meeting_no INT, meeting_title TEXT, starting_time TIMESTAMP, ending_time TIMESTAMP, room_no INT)";
+  "CREATE TABLE IF NOT EXISTS meeting (meeting_no INT, meeting_title TEXT, starting_time TIMESTAMP, ending_time TIMESTAMP, room_no INT)";
 con.query(meeting_sql, function (err, result) {
   if (err) throw err;
   console.log("meeting Table created");
