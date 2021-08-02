@@ -11,14 +11,18 @@ con.connect(function (err) {
   if (err) throw err;
   console.log("Connected!");
 
-  con.query("DROP DATABASE meetup");
+});
+
+ con.query("DROP DATABASE IF EXISTS meetup", (err, result) => {
+    if(err) throw err;
+    console.log(result);
+});
 
   /* Create a database named "meetup": */
   con.query("CREATE DATABASE meetup", function (err, result) {
     if (err) throw err;
     console.log("Database created");
   });
-});
 
 // Create Invitee table
 
