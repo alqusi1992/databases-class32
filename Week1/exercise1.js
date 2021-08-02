@@ -79,3 +79,5 @@ con.query(meeting_data, function (err, result) {
   if (err) throw err;
   console.log("meeting data has been inserted");
 });
+
+connection.end();
