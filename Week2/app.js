@@ -19,6 +19,7 @@ const {
 const { AUTHORS_DATA, PAPER_DATA, JUNCTION_DATA } = require("./data.js");
 
 const {
+  qeustion_0,
   question_1,
   question_2,
   question_3,
@@ -64,6 +65,7 @@ JUNCTION_DATA.forEach((junctions) => {
 
 // Select Quires
 
+db.query(qeustion_0, execQuerySelect);
 db.query(question_1, execQuerySelect);
 db.query(question_2, execQuerySelect);
 db.query(question_3, execQuerySelect);
