@@ -17,6 +17,6 @@ const question_4 = `select SUM(gender) AS 'total published' from authors where g
 
 /* Sum of the research papers of the authors per university */
 
-const question_5 = `SELECT university, COUNT(DISTINCT(paper_id)) papers_total FROM authors, author_Papers_junction  apj WHERE authors.author_no=apj.author_no GROUP BY university`;
+const question_5 = `SELECT university, COUNT(DISTINCT(paper_id)) total_papers FROM authors, author_Papers_junction  apj WHERE authors.author_no=apj.author_no GROUP BY university`;
 
 module.exports = { question_1, question_2, question_3, question_4, question_5 };
