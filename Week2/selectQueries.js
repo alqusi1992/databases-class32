@@ -5,7 +5,7 @@ const qeustion_0 = `select authors.author_no, author_name, university, date_of_b
 
 /* Write a query that prints names of all authors and their corresponding mentors. */
 
-const question_1 = `SELECT ath.author_name author, mnt.author_name mentor FROM authors ath LEFT JOIN authors mnt ON ath.mentor=mnt.author_no`;
+const question_1 = `SELECT a.author_name author, m.author_name mentor FROM authors a LEFT JOIN authors m ON a.mentor=m.author_no`;
 
 /* Average of the h-index of all authors per university.*/
 
