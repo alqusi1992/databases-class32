@@ -69,3 +69,5 @@ db.query(question_2, execQuerySelect);
 db.query(question_3, execQuerySelect);
 db.query(question_4, execQuerySelect);
 db.query(question_5, execQuerySelect);
+
+connection.end();
