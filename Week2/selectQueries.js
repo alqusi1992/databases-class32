@@ -4,11 +4,11 @@ const question_1 = `SELECT ath.author_name author, mnt.author_name mentor FROM a
 
 /* Average of the h-index of all authors per university.*/
 
-const question_2 = `select university, AVG(h_index) h_index_average from authors GROUP BY university`;
+const question_2 = `select university, AVG(h_index) index_averg from authors GROUP BY university`;
 
 /* Minimum and maximum of the h-index of all authors per university */
 
-const question_3 = `SELECT university, min(h_index) AS min_h_index, max(h_index) AS max_h_index FROM authors
+const question_3 = `SELECT university, min(h_index) AS min_index, max(h_index) AS max_index FROM authors
 GROUP BY university`;
 
 /* Sum of the research papers published by all female authors */
