@@ -19,7 +19,7 @@ async function insertData() {
       .insertOne(city_1);
     console.log(result1);
 
-    var city_2 = {
+    const city_2 = {
       Name: "Amsterdam",
       CountryCode: "NLD",
       District: "Noord-Holland",
