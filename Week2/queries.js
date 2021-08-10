@@ -12,12 +12,12 @@ const queries = {
     paper_title CHAR(150), 
     conference CHAR(150), 
     publish_date DATE)`,
-  ADD_COLUMN_MENTOR: `alter table
+  ADD_COLUMN_MENTOR: `ALTER TABLE
   authors
-  add
-  column mentor int,
-  add
-  constraint foreign key (mentor) references authors (author_no)`,
+  ADD
+  COLUMN mentor int,
+  ADD
+  CONSTRAINT  FOREIGN KEY (mentor) REFERENCES authors (author_no)`,
   JUNCTION_AUTHORS_PAPERS: `CREATE TABLE IF NOT EXISTS author_Papers_junction (
     author_no INT NOT NULL,
     paper_id INT NOT NULL,
