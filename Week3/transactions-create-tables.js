@@ -9,6 +9,7 @@ const {
   MINUS_AMOUNT,
   PLUS_AMOUNT,
   COMMITTED,
+  ROLLBACK,
 } = require("./transaction.js");
 
 const db = mysql.createConnection({
@@ -66,5 +67,7 @@ db.query(MINUS_AMOUNT, execQuery);
 db.query(PLUS_AMOUNT, execQuery);
 
 db.query(COMMITTED, execQuery);
+
+db.query(ROLLBACK, execQuery);
 
 db.end();
