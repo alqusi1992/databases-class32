@@ -16,6 +16,7 @@ const MINUS_AMOUNT =
 const PLUS_AMOUNT =
   "UPDATE account_changes SET amount = amount + 1000 WHERE account_number = 102";
 const COMMITTED = "COMMIT";
+const ROLLBACK = "ROLLBACK";
 
 db.end();
 
@@ -24,4 +25,5 @@ module.exports = {
   MINUS_AMOUNT,
   PLUS_AMOUNT,
   COMMITTED,
+  ROLLBACK,
 };
